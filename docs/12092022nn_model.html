@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="pandoc">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#neural net train</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(neuralnet)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Attaching package: 'neuralnet'</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:dplyr':</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     compute</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#load table</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"~/ML_unipd/project work"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>df.nn<span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"df_nn.tsv"</span>, <span class="at">sep =</span><span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>scaled <span class="ot">&lt;-</span> <span class="fu">round</span>(df.nn<span class="sc">/</span><span class="dv">100</span>, <span class="dv">2</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>scaled<span class="sc">$</span>class<span class="ot">&lt;-</span><span class="fu">as.numeric</span>(<span class="fu">sub</span>(<span class="fl">0.02</span>, <span class="dv">1</span>, scaled<span class="sc">$</span>class))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>scaled<span class="sc">$</span>class<span class="ot">&lt;-</span><span class="fu">as.numeric</span>(<span class="fu">sub</span>(<span class="fl">0.01</span>, <span class="dv">0</span>, scaled<span class="sc">$</span>class))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(scaled[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>])</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 10 × 6</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    class Phocaeicola_vulgatus Bacteroides_cel… Phocaeicola_dor… Bacteroides_uni…</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;dbl&gt;                &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1     1                 0.14                0                0             0.07</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2     1                 0.16                0                0             0.06</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3     1                 0.11                0                0             0.03</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4     1                 0.21                0                0             0.08</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5     1                 0.01                0                0             0.01</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6     1                 0.04                0                0             0.03</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7     1                 0.24                0                0             0.06</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8     1                 0.05                0                0             0.12</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9     1                 0.18                0                0             0.01</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10     1                 0.04                0                0             0.28</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # … with 1 more variable: Alistipes_putredinis &lt;dbl&gt;</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">#sum(is.na(scaled))</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">#colSums(scaled==0)</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">#data splitting</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>index1 <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(scaled),<span class="fu">round</span>(<span class="fl">0.70</span><span class="sc">*</span><span class="fu">nrow</span>(scaled)))</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> scaled[index1,]</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>delta_df <span class="ot">&lt;-</span> scaled[<span class="sc">-</span>index1,]</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>index2 <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(delta_df),<span class="fu">round</span>(<span class="fl">0.65</span><span class="sc">*</span><span class="fu">nrow</span>(delta_df)))</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>valid <span class="ot">&lt;-</span> delta_df[index2,]</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> delta_df[<span class="sc">-</span>index2,]</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># NN training</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">names</span>(train)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">as.formula</span>(<span class="fu">paste</span>(<span class="st">"class ~"</span>, <span class="fu">paste</span>(n[<span class="sc">!</span>n <span class="sc">%in%</span> <span class="st">"class"</span>], <span class="at">collapse =</span> <span class="st">" + "</span>)))</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co">#tr &lt;- train</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co">#val &lt;- valid</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>run_once <span class="ot">&lt;-</span> <span class="cf">function</span>(tr, val, <span class="at">weights =</span> <span class="cn">NULL</span>) {</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    nn_mod <span class="ot">&lt;-</span> <span class="fu">neuralnet</span>(f,<span class="at">data=</span>tr,</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                        <span class="at">hidden=</span><span class="fu">c</span>(<span class="dv">64</span>, <span class="dv">32</span>, <span class="dv">8</span>),</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>                        <span class="at">threshold =</span> <span class="cn">Inf</span>,</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>                        <span class="at">stepmax =</span> <span class="dv">1</span>,</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>                        <span class="at">rep =</span> <span class="dv">1</span>,</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>                        <span class="at">startweights =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>                        <span class="co">#act.fct= "relu",</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>                        <span class="at">err.fct =</span> <span class="st">"ce"</span>,</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>                        <span class="at">lifesign =</span> <span class="st">"minimal"</span>,</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>                        <span class="at">linear.output=</span>F)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    loss_tr <span class="ot">&lt;-</span> nn_mod[[<span class="st">"result.matrix"</span>]][[<span class="dv">1</span>,<span class="dv">1</span>]]</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    val_y <span class="ot">&lt;-</span> <span class="fu">predict</span>(nn_mod, <span class="at">newdata =</span> val)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="co">#val_y &lt;-round(val_y)</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    loss_val <span class="ot">&lt;-</span> <span class="fu">mean</span>(val_y <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> val[[<span class="st">"class"</span>]]) <span class="sc">-</span> val[[<span class="st">"class"</span>]] <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> val_y)) <span class="co">#not sure it's ok</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="co">#loss_val &lt;- loss.cross.entropy(val_y, val)</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>        <span class="at">loss_tr =</span> loss_tr,</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>        <span class="at">loss_val =</span> loss_val,</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>        <span class="at">weights =</span> nn_mod[[<span class="st">"weights"</span>]]</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>run_n <span class="ot">&lt;-</span> <span class="cf">function</span>(tr, val, m, <span class="at">weights =</span> <span class="cn">NULL</span>) {</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>    perf_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>        <span class="at">epoch =</span> <span class="fu">seq_len</span>(m),</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>        <span class="at">loss_tr =</span> <span class="cn">NA_real_</span>,</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>        <span class="at">loss_val =</span> <span class="cn">NA_real_</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>    first <span class="ot">&lt;-</span> <span class="fu">run_once</span>(tr, val, <span class="at">weights =</span> weights)</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>    perf_df[<span class="dv">1</span>, <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(first[[<span class="st">"loss_tr"</span>]], first[[<span class="st">"loss_val"</span>]])</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>    epoch <span class="ot">&lt;-</span> first</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(m <span class="sc">-</span> <span class="dv">1</span>)) {</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>        epoch[] <span class="ot">&lt;-</span> <span class="fu">run_once</span>(tr, val, <span class="at">weights =</span> epoch[[<span class="st">"weights"</span>]])</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>        perf_df[i, <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(epoch[[<span class="st">"loss_tr"</span>]], epoch[[<span class="st">"loss_val"</span>]])</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>        <span class="at">perf_df =</span> perf_df,</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>        <span class="at">last_weights_set =</span> epoch[[<span class="st">"weights"</span>]]</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="co"># se aggiungi i weights "parti" da li, ovvero è come se:</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="co"># senza weights: "fai 50 epoche" (da zero)</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="co"># con i weights: "fai ALTRE 50 epoche" (partendo da dove ero arrivata)</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>run_50 <span class="ot">&lt;-</span> <span class="fu">run_n</span>(train, valid, <span class="at">m=</span><span class="dv">50</span>)</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8 thresh: Inf rep: 1/1 steps:</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       1  error: 1658.30938   time: 0.05 secs</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1715.02597   time: 0.05 secs</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1030.51405   time: 0.05 secs</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1290.04456   time: 0.08 secs</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2749.71083   time: 0.06 secs</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2314.98663   time: 0.05 secs</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1097.58877   time: 0.18 secs</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1239.81217   time: 0.06 secs</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2753.81005   time: 0.06 secs</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1137.98792   time: 0.07 secs</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1025.10728   time: 0.06 secs</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1406.78448   time: 0.07 secs</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1130.64085   time: 0.08 secs</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1029.60943   time: 0.06 secs</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1053.34845   time: 0.07 secs</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 3415.34844   time: 0.12 secs</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2027.5789    time: 0.09 secs</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2218.93058   time: 0.13 secs</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2099.83741   time: 0.05 secs</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1118.30668   time: 0.13 secs</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1030.75609   time: 0.05 secs</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1515.62113   time: 0.07 secs</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1130.72965   time: 0.05 secs</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1693.70417   time: 0.06 secs</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1189.46683   time: 0.05 secs</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1643.87149   time: 0.05 secs</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2630.72471   time: 0.07 secs</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1967.97557   time: 0.07 secs</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 3534.88136   time: 0.07 secs</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1439.90027   time: 0.05 secs</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2657.16052   time: 0.06 secs</span></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1271.20865   time: 0.06 secs</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1195.85751   time: 0.06 secs</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1032.23486   time: 0.06 secs</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1172.97633   time: 0.09 secs</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1256.56517   time: 0.06 secs</span></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2609.49532   time: 0.06 secs</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1352.05933   time: 0.08 secs</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1121.11731   time: 0.05 secs</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 3272.86188   time: 0.05 secs</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1078.91466   time: 0.06 secs</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1306.58467   time: 0.06 secs</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1623.49229   time: 0.05 secs</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1119.14506   time: 0.05 secs</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1192.9563    time: 0.05 secs</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1231.24204   time: 0.04 secs</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2759.6292    time: 0.05 secs</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1318.70124   time: 0.13 secs</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 3692.23202   time: 0.08 secs</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1014.92634   time: 0.06 secs</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co"># se ne voglio fare altre 50</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>run_100 <span class="ot">&lt;-</span> <span class="fu">run_n</span>(<span class="at">tr =</span> train, <span class="at">val=</span> valid, <span class="at">m =</span> <span class="dv">50</span>, <span class="at">weights=</span>run_50[[<span class="st">"last_weights_set"</span>]])</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1159.09107   time: 0.05 secs</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1246.98831   time: 0.05 secs</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1654.94887   time: 0.07 secs</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1942.27444   time: 0.09 secs</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1790.03772   time: 0.05 secs</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1816.57905   time: 0.05 secs</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1745.58576   time: 0.05 secs</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 3447.51721   time: 0.05 secs</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1105.68905   time: 0.05 secs</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2536.5659    time: 0.05 secs</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1662.5968    time: 0.05 secs</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1079.23177   time: 0.05 secs</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1255.74829   time: 0.09 secs</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2807.15607   time: 0.06 secs</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2469.44344   time: 0.05 secs</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1135.47754   time: 0.06 secs</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1227.01233   time: 0.09 secs</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1064.55944   time: 0.09 secs</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1285.45733   time: 0.06 secs</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1239.29573   time: 0.06 secs</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1052.56586   time: 0.09 secs</span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1047.00086   time: 0.05 secs</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1042.86564   time: 0.05 secs</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1931.91901   time: 0.05 secs</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2361.84559   time: 0.05 secs</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1963.96397   time: 0.15 secs</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1800.4285    time: 0.05 secs</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 3711.21453   time: 0.05 secs</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1409.26784   time: 0.06 secs</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1244.62225   time: 0.05 secs</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1017.87813   time: 0.05 secs</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1024.76135   time: 0.05 secs</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1489.70604   time: 0.05 secs</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1228.3261    time: 0.06 secs</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 987.81196    time: 0.06 secs</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1477.93212   time: 0.04 secs</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 3635.04118   time: 0.04 secs</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 4005.76971   time: 0.12 secs</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1651.97849   time: 0.13 secs</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1815.891     time: 0.06 secs</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1918.86809   time: 0.06 secs</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1026.5638    time: 0.06 secs</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2360.82205   time: 0.07 secs</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1105.55879   time: 0.08 secs</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1089.93252   time: 0.08 secs</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 2304.22016   time: 0.07 secs</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1337.21243   time: 0.06 secs</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1042.4811    time: 0.06 secs</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1056.04504   time: 0.05 secs</span></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; hidden: 64, 32, 8    thresh: Inf    rep: 1/1    steps:       1   error: 1161.38804   time: 0.06 secs</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>perfs <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">rbind</span>(run_50<span class="sc">$</span>perf_df, run_100<span class="sc">$</span>perf_df))</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>perfs <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(run_50<span class="sc">$</span>perf_df, run_100<span class="sc">$</span>perf_df) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>         <span class="fu">rownames_to_column</span>(<span class="st">"Final_Epoch"</span>)</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>perfs<span class="sc">$</span>Final_Epoch<span class="ot">&lt;-</span><span class="fu">as.numeric</span>(perfs<span class="sc">$</span>Final_Epoch)</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="co">#perfs &lt;- as.data.frame(run_50$perf_df)</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>perfs <span class="sc">|</span><span class="er">&gt;</span>  <span class="co"># plot per tutte e 100 le epoche!</span></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> epoch)) <span class="sc">+</span></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>    <span class="co"># curva di training, che deve andare GIÙ!!</span></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> loss_tr), <span class="at">colour =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>    <span class="co"># curva di validazione, che deve andare a U!!</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> loss_val), <span class="at">colour =</span> <span class="st">"orange"</span>) <span class="sc">+</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="st">"Epochs"</span>,</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">"Loss value"</span>,</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Learning curves for my super cool NN"</span></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: Removed 2 row(s) containing missing values (geom_path).</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Removed 2 row(s) containing missing values (geom_path).</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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"></p>
+<p><sup>Created on 2022-09-12 with <a href="https://reprex.tidyverse.org/">reprex v2.0.2</a></sup></p>
+
+
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(t) { return this._call('downloadPdfs', [t]); },
+  open() { return this._call('open', []); },
+  _call(methodName, methodArgs) {
+    window.postMessage({ token: '0.39364907905272994', methodName, methodArgs }, 'http://localhost:21898');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data)) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body></html>
